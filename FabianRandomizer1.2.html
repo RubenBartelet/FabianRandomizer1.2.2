@@ -1,0 +1,314 @@
+<html>
+<head>
+  <title>Fabian Randomizer</title>
+</head>
+<body>
+    <center>
+      
+<font><b>The Great Fabian Randomizer 1.2.2</b></font>
+<p id="ScoreText"></p>
+<button onclick="RandomizeFabian()">Randomize Fabian</button>        
+<p id="RandomFabianText"></p>       
+<p id="numberOfSameVowelsText"></p>
+<p id="numberOfFabianText"></p>
+<p id='VowelsText'>You'll get 30 points for all vowels being the same</p><p> and all the way down to 10 for the word being FABIAN. THAT IS VERY WRONG! </p><p id ='YIJsWorth'></p><p> and for every A or I -1 .</p><p id='TimeText'>You must wait 2 seconds to click again or you will lose points.</p>
+<p id="CanClickText"></p>
+<button id='Ybutton' onclick="YIJplus1()">IJ's and Y's are worth one score more. Cost: 50</button>   
+<button id='VowelsButton' onclick="Vowelsplus1()">All Vowels being the same +10. Cost: 20</button>  
+<button id = 'TimeButton' onclick="TimeMin()">You can click 250 ms faster. Cost: 100</button>  
+<br><br>
+           <button onclick='RickRoll();'>
+Credits    </button>
+</center>
+    <script>
+    var  score = 100;
+    var numbersOfSameVowels = 0;
+    var numbersOfFABIANs = 0;
+    var klinker1random;
+    var klinker2random;
+    var klinker3random;
+    var klinker1 = 'A';
+    var klinker2 = 'I';
+    var klinker3 = 'A';
+    var hetlevon;
+    var canClick = true;
+    var FabainsYouGot = 0;
+    var YsAndIJsWorth = 1;
+    var VowelsWorth = 30;
+    var TimeCanClick = 2000;
+    var TimeCanClick2 = 8;
+
+             document.body.background = "FabKwap.png";
+
+     document.getElementById("RandomFabianText").innerHTML = hetlevon;
+    document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+     document.getElementById("numberOfSameVowelsText").innerHTML = 'Number of same vowels: '+numbersOfSameVowels;
+     document.getElementById("CanClickText").innerHTML = 'You can click: '+ canClick;
+      document.getElementById("YIJsWorth").innerHTML = 'For every Y or IJ in the name you will get '+YsAndIJsWorth;
+         document.getElementById("VowelsText").innerHTML = 'You will get ' + VowelsWorth+ ' score for all vowels being the same ';
+         document.getElementById("TimeText").innerHTML = 'You must wait ' +TimeCanClick+ ' ms to click again or you will lose points.';
+        document.getElementById("Ybutton").innerHTML = 'IJs and Ys are worth one score more. Cost: ' + ((YsAndIJsWorth+1) * 16);
+        document.getElementById("TimeButton").innerHTML = 'You can click 250 ms faster. Cost: ' + (((TimeCanClick2)+1) * 20);
+        document.getElementById("VowelsButton").innerHTML = 'All Vowels being the same +10. Cost: ' + (((VowelsWorth/10)+2) * 7);
+function RickRoll()
+        {
+            window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        }
+        function TimeMin()
+        {
+             if (score >= (((TimeCanClick2)+1) * 20) && TimeCanClick != 0){
+            score -= (((TimeCanClick2)+1) * 20);
+         TimeCanClick -= 250;
+                 TimeCanClick2 += 3;
+       }
+document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+document.getElementById("TimeButton").innerHTML = 'You can click 250 ms faster. Cost: ' + ((((TimeCanClick2)+1) * 20));
+            document.getElementById("TimeText").innerHTML = 'You must wait ' +TimeCanClick+ ' ms to click again or you will lose points.';
+                             f69();
+
+
+
+        }
+function YIJplus1()
+        {
+         // alert('it is happening');
+          if (score >= ((YsAndIJsWorth+1) * 16)) {
+            score = score - ((YsAndIJsWorth+1) * 16);
+           YsAndIJsWorth++;
+       }
+                                             f69();
+
+document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+document.getElementById("YIJsWorth").innerHTML = 'For every Y or IJ in the name you will get ' + YsAndIJsWorth;
+            document.getElementById("Ybutton").innerHTML = 'IJs and Ys are worth one score more. Cost: ' + ((YsAndIJsWorth+1) * 16);
+        }
+        function Vowelsplus1()
+        {
+            if (score >= (((VowelsWorth/10)+2) * 7)){
+            score -= (((VowelsWorth/10)+2) * 7);
+         VowelsWorth +=10;
+               
+       }
+                                        f69();
+
+          document.getElementById("VowelsButton").innerHTML = 'All Vowels being the same +10. Cost: ' + (((VowelsWorth/10)+2) * 7);
+document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+document.getElementById("VowelsText").innerHTML = 'You will get ' + VowelsWorth+ ' score for all vowels being the same ';
+        }
+function RandomizeFabian() {
+    //score+= 1000;
+    if(score != 0 && canClick){
+     // score+= 1000;
+
+   canClick = false;
+    score--;
+                                     f69();
+
+   
+    klinker1random = Math.floor(Math.random() * 7);
+    if(klinker1random == 1)
+    {
+       var klinker1 = 'A'; 
+                score--;
+                                     f69();
+
+    }
+    else  if(klinker1random == 2)
+    {
+       var klinker1 = 'E'; 
+    }
+    else if(klinker1random == 3)
+    {
+       var klinker1 = 'U';
+    }
+    else if(klinker1random == 4)
+    {
+       var klinker1 = 'I'; 
+         score--;
+                                     f69();
+
+    }
+    else if(klinker1random == 5)
+    {
+       var klinker1 = 'O'; 
+    }
+    else if(klinker1random == 6)
+    {
+       var klinker1 = 'IJ';
+        score += YsAndIJsWorth;
+    }
+    else if(klinker1random == 0)
+    {
+       var klinker1 = 'Y';  
+        score += YsAndIJsWorth;
+    }
+    klinker2random = Math.floor(Math.random() * 7);
+    if(klinker2random == 1)
+    {
+       var klinker2 = 'A'; 
+         score--;
+                                     f69();
+
+    }
+    else  if(klinker2random == 2)
+    {
+       var klinker2 = 'E'; 
+    }
+    else if(klinker2random == 3)
+    {
+       var klinker2 = 'U';
+    }
+    else if(klinker2random == 4)
+    {
+       var klinker2 = 'I'; 
+         score--;
+    }
+    else if(klinker2random == 5)
+    {
+       var klinker2 = 'O'; 
+    }
+    else if(klinker2random == 6)
+    {
+       var klinker2 = 'IJ';
+        score += YsAndIJsWorth;
+                                     f69();
+
+    }
+    else if(klinker2random == 0)
+    {
+       var klinker2 = 'Y';  
+        score += YsAndIJsWorth;
+                                     f69();
+
+    }
+    klinker3random = Math.floor(Math.random() * 7);
+    if(klinker3random == 1)
+    {
+       var klinker3 = 'A'; 
+         score--;
+                                     f69();
+
+    }
+    else  if(klinker3random == 2)
+    {
+       var klinker3 = 'E'; 
+    }
+    else if(klinker3random == 3)
+    {
+       var klinker3 = 'U';
+    }
+    else if(klinker3random == 4)
+    {
+       var klinker3 = 'I'; 
+         score--;
+                                     f69();
+
+    }
+    else if(klinker3random == 5)
+    {
+       var klinker3 = 'O'; 
+    }
+    else if(klinker3random == 6)
+    {
+       var klinker3 = 'IJ';
+       score += YsAndIJsWorth;
+                                     f69();
+
+    }
+    else if(klinker3random == 0)
+    {
+       var klinker3 = 'Y';  
+        score += YsAndIJsWorth;
+                                     f69();
+
+    }
+    
+    if(klinker1 == klinker2 && klinker3 == klinker1 && klinker2 == klinker3)
+    {
+        score += 30;
+        numbersOfSameVowels++;
+                                     f69();
+
+    }
+    if(klinker1 == 'A' && klinker2 == 'I' && klinker3 == 'A')
+    {
+        score = 10;
+        alert('You monster! Score = 10.');
+                                     f69();
+
+       // document.getElementById("numberOfFabianText").innerHTML = 'Fabians you got: ' +  FabiansYouGot;
+    }
+        if((klinker1 == 'Y' && klinker2 == 'Y' && klinker3 == 'Y'))
+    {
+        score += YsAndIJsWorth * 30;
+        alert('You got only Ys! Congratulations! Score + '+YsAndIJsWorth*30);
+                                     f69();
+
+        
+    }
+     
+        if((klinker1 == 'IJ' && klinker2 == 'IJ' && klinker3 == 'IJ'))
+    {
+        score += YsAndIJsWorth * 30;
+        alert('You got only Ys! Congratulations! Score + '+YsAndIJsWorth*30);
+                                     f69();
+
+    }   
+    if(score < 0 || score == 0)
+    {
+        score = 0;
+        alert('u are ded');
+    }
+    hetlevon = 'F' + klinker1 + 'B' + klinker2 + klinker3 + 'N';
+  document.getElementById("RandomFabianText").innerHTML = hetlevon;
+    document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+     document.getElementById("numberOfSameVowelsText").innerHTML = 'Number of same vowels: '+numbersOfSameVowels;
+         document.getElementById("CanClickText").innerHTML = 'You can click: '+ canClick;
+         
+     setTimeout(function(){ 
+         canClick = true;
+   document.getElementById("CanClickText").innerHTML = 'You can click: '+ canClick;
+     }, TimeCanClick);
+   } else if (canClick == false && score!= 0){
+            f69();
+  if(score > 9){
+   alert('You Clicked to fast. Score = 10');
+       score = 10;
+       document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+  } else{                 
+ alert('You Clicked to fast. Score = 1');
+       score = 1;
+       document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+  }
+   }
+    function ScoreMin10()
+    {
+    score -= 25;
+    document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+        
+    }
+                  
+document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+
+}
+        
+        function f69(){
+                if(score == 69)
+{
+     document.body.background = "CumBeast.jpg";
+    
+}else
+{
+         document.body.background = "FabKwap.png";
+
+}
+    
+   
+  document.getElementById("ScoreText").innerHTML = 'Score: '+score;
+
+        }
+        
+</script>
+
+</body>
+</html>
